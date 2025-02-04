@@ -1,0 +1,14 @@
+<h2>
+  Your To Do List
+</h2>
+<div>
+  <input type="'text" [(ngModel)]="newTask" placeholder="Enter a new task" />
+  <button (click)="addTask()">Add task</button>
+
+  <ul>
+    <li *ngFor="let task of tasks">
+      {{task.title}}
+      <button (click)="removeTask(task.id)">Deleted</button>
+    </li>
+  </ul>
+</div>
